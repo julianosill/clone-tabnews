@@ -18,9 +18,9 @@ export default async function status(request, response) {
     values: [databaseName],
   });
   const dabataseOpenedConnectionsValue =
-  dabataseOpenedConnectionsResult.rows[0].count;
+    dabataseOpenedConnectionsResult.rows[0].count;
 
-  response.status(200).send({
+  response.status(200).json({
     updated_at: updateAt,
     dependencies: {
       database: {
